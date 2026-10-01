@@ -99,70 +99,71 @@ The main objective of this project is to reduce manual surveillance, organize de
 ## System Architecture
 Weapon Detection UI
 (HTML / CSS / JavaScript / Bootstrap)
-│
-▼
-Flask Backend
-(REST APIs, Business Logic)
-│
-▼
-┌─────────┴─────────┐
-│ │
-▼ ▼
-YOLOv5 Model Face Recognition
-(Detection) (OpenCV SFace)
-│ │
-└─────────┬─────────┘
-│
-▼
-SQLite Database
-(SQLAlchemy ORM)
-│
-▼
-Telegram Alerts
+              │
+              ▼
+       Flask Backend
+    (REST APIs, Business Logic)
+              │
+              ▼
+    ┌─────────┴─────────┐
+    │                   │
+    ▼                   ▼
+YOLOv5 Model      Face Recognition
+(Detection)       (OpenCV SFace)
+    │                   │
+    └─────────┬─────────┘
+              │
+              ▼
+       SQLite Database
+     (SQLAlchemy ORM)
+              │
+              ▼
+      Telegram Alerts
+```
 
 
 ## Project Structure
 Weapon-Detection-System/
-├── app.py # Main Flask application
-├── detection.py # Weapon detection logic
-├── face_recognition_module.py # Face recognition logic
-├── alerts.py # Telegram/Email/SMS alerts
-├── models.py # Database models
-├── database.py # Database initialization
-├── video_evidence.py # Video recording logic
-├── utils.py # Utility functions
-├── evaluate.py # Model evaluation script
-├── convert_dataset.py # Dataset conversion script
-├── main.py # Entry point
-├── best.pt # Trained YOLOv5 model
-├── evaluation_results.json # Evaluation metrics
-├── .env # Environment variables
-├── .gitignore # Git ignore file
-├── pyproject.toml # Python project config
-├── ALERTS.md # Alert setup guide
-├── README.md # This file
+├── app.py                          # Main Flask application
+├── detection.py                    # Weapon detection logic
+├── face_recognition_module.py      # Face recognition logic
+├── alerts.py                       # Telegram/Email/SMS alerts
+├── models.py                       # Database models
+├── database.py                     # Database initialization
+├── video_evidence.py               # Video recording logic
+├── utils.py                        # Utility functions
+├── evaluate.py                     # Model evaluation script
+├── convert_dataset.py              # Dataset conversion script
+├── main.py                         # Entry point
+├── best.pt                         # Trained YOLOv5 model
+├── evaluation_results.json         # Evaluation metrics
+├── .env                            # Environment variables
+├── .gitignore                      # Git ignore file
+├── pyproject.toml                  # Python project config
+├── ALERTS.md                       # Alert setup guide
+├── README.md                       # This file
 │
-├── dataset_yolo/ # YOLO format dataset
-│ ├── data.yaml
-│ ├── images/
-│ └── labels/
+├── dataset_yolo/                   # YOLO format dataset
+│   ├── data.yaml
+│   ├── images/
+│   └── labels/
 │
-├── known_faces/ # Known persons photos
+├── known_faces/                    # Known persons photos
 │
 ├── static/
-│ ├── css/styles.css
-│ ├── js/detection.js
-│ ├── uploads/
-│ ├── results/
-│ │ └── videos/
-│ └── evaluation/
+│   ├── css/styles.css
+│   ├── js/detection.js
+│   ├── uploads/
+│   ├── results/
+│   │   └── videos/
+│   └── evaluation/
 │
 ├── templates/
-│ ├── layout.html
-│ ├── index.html
-│ ├── history.html
-│ ├── analytics.html
-│ └── evaluation.html
+│   ├── layout.html
+│   ├── index.html
+│   ├── history.html
+│   ├── analytics.html
+│   └── evaluation.html
 │
 └── evaluation_runs/
 
