@@ -1,0 +1,71 @@
+{
+  "model": "best.pt",
+  "data_yaml": "C:\\Users\\ap735\\Desktop\\Weapon Detection\\Aditya\\dataset_yolo\\data.yaml",
+  "test_images": 472,
+  "metrics": {
+    "precision": 0.357291,
+    "recall": 0.018162,
+    "f1_score": 0.034568,
+    "mAP50": 0.003026,
+    "mAP50_95": 0.002069
+  },
+  "per_class": [
+    {
+      "class": "billete",
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "mAP50": 0.003026,
+      "mAP50_95": 0.002069
+    },
+    {
+      "class": "knife",
+      "precision": 0.068785,
+      "recall": 0.041667,
+      "f1": 0.051897,
+      "mAP50": 0.003026,
+      "mAP50_95": 0.002069
+    },
+    {
+      "class": "monedero",
+      "precision": 0.003088,
+      "recall": 0.012821,
+      "f1": 0.004977,
+      "mAP50": 0.003026,
+      "mAP50_95": 0.002069
+    },
+    {
+      "class": "pistol",
+      "precision": 0.003088,
+      "recall": 0.012821,
+      "f1": 0.004977,
+      "mAP50": 0.003026,
+      "mAP50_95": 0.002069
+    },
+    {
+      "class": "smartphone",
+      "precision": 0.003088,
+      "recall": 0.012821,
+      "f1": 0.004977,
+      "mAP50": 0.003026,
+      "mAP50_95": 0.002069
+    },
+    {
+      "class": "tarjeta",
+      "precision": 0.003088,
+      "recall": 0.012821,
+      "f1": 0.004977,
+      "mAP50": 0.003026,
+      "mAP50_95": 0.002069
+    }
+  ],
+  "confusion_matrix": "static\\evaluation\\confusion_matrix.png",
+  "classes": [
+    "billete",
+    "knife",
+    "monedero",
+    "pistol",
+    "smartphone",
+    "tarjeta"
+  ]
+}
